@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res) {
-  res.send("this is the root page")
+  res.render('home.ejs');
 });
 
 app.listen(process.env.Port || 3000, function() {
